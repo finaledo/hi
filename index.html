@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="boowomp.png" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="profile">
+            <img src="user.png" alt="profile" class="icon" draggable="false">
+            <h3>Hanif</h3>
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="about.html" onclick="alert('really?')" target="_blank">About</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
+        </div>
+        <div class="theme">
+            <img src="moon.png" alt="color mode" class="icon" draggable="false">
+            <button id="themeToggle"><h4>Color Mode</h4></button>
+        </div>
+    </div>
+    <div class="screen">
+        <div class="intro">
+            <div class="line">
+                <h5 style="color: gray;" class="resp">Welcome to my portfolio/about me website</h5><br>
+                <h1 class="resp">Hey guys, I'm <span>Hanif.</span></h1><br>
+                <h5>Programmer and subpar animator rn, im currently working<br> on this and some of my personal projects.</h5><br>
+                <div class="buttons">
+                    <button style="color: black;" onclick="celebrate()">More info</button>
+                    <button style="background-color: rgb(56, 56, 56);" onclick="fact()">Fun facts about me</button>
+                </div>
+            </div>
+            <div class="line">
+                <img src="myphoto.jpg" alt="my photo" draggable="false">
+            </div>
+        </div>
+        <div class="info" id="Projects">
+            <div class="bar">
+                <h2>My projects that i made</h2>
+            </div>
+            <div class="bar">
+                <h2>over the years</h2>
+            </div>
+            <div class="projects">
+                <div class="leftkey">
+                    <button id="prev">⬅️</button>
+                </div>
+                <div class="content">
+                    <div class="scroll" id="scrollContainer">
+                        <div class="project-box">
+                            <img src="boowomp.png" alt="spongebob boowomp">
+                            <div class="heading">
+                                <a href="https://finaledo.github.io/untuk-sir/">Website for sir (2026)</a>
+                            </div>
+                        </div>
+                        <div class="project-box">
+                            <img src="guy.jpg" alt="guy talking to brick wall">
+                            <div class="heading">
+                                <a href="https://scratch.mit.edu/projects/1273396704/">One of my animations (2026)</a>
+                            </div>
+                        </div>
+                        <div class="project-box">
+                            <img src="baby.jfif" alt="ash baby">
+                            <div class="heading">
+                                <a href="https://ncase.me/sim/?lz=N4IgtgpgLghiBcoAmEDOBjATgSwA5WwHsA7BEAIQBkBBAOQGkACAZQEkBZAQgB1jeBRYlAiZGwgB5RG2YoxjEAnmIiSARoXEAaRugAW8gOYRGmAK4AbNIwBkjCGEIArbI1URzhAO7bm1AGr8NiwAEtQASoEKhKaiqNhgnCCaIEiYMJ4IAGzJAGa4qAgAjMm45jAKCFBmEAC+yaiwwgXwANqg2EgIAAzJ2OgkZEkgxDCQZPb4Sqi4hFBDMOgEJM0tALrJKBg4+ESk8CC67h7ScmCuZcQA1iB17Z3wxSB9A-uAvBuAIztDI2P7uDC4IiGmyweCWexAAGFzH1LtJ+rJbH8GsYZIxiBBPHYHM54Lx2At4IxcJg0KgdCQqoRzABqfpgMDyJDU6YLCC8ADyUEOmEJ-VwShymEIZ342LwECQ2BgADpCJgDPNFrsVqA4gZwQA+AC8X1MYCK9UaEFYABEyABmRVglUgYmEVQwVTYaFQCrwLrSgCcAFZkgtrQg2iAWegIN16jMoMwjaaLUNLDAAG4QaMwYSx-aFIaugFkBzJgD6UEIN3WIBzYf22ByBbSxCQwtLyQrZGrBfR2AMunUmBumlVnc1OuSxD1BuDMbN+29VuVgdAdodTpdbo9Pr9SuW8+Df1D4Z3s1T6anIBnyQTyaPxpPWebClz+3zECLJZqZZbVZrdYb+rfd4fTw1h2XY9n2A7qmQ2q6vqDyGmm15kJks5bq0C5CkuzrYK63Rer6ID+nOqE7qy+7TIek6IfGEBJimFGZtm96VuAhCFsWTbloxrZfoyjZ-hxAFtsB3ZymBtroY6mHYe60rmhuAZESGlY9AeUZ0cpF60fBGbKR+zGsa+76cZ+tY8b+qy3E89wAEy9PCZCAEDkXyjExGDYKgqBygUGxoCCOwvJC0LoLCzwIkSMDItIsjopi9hONguLEPi6CEsSpLkkIQo0nSDL1syu5ssQnLcryhD8owgrCowopxQCkoynKCpyYRQZqkO0Hjg0Wk3shxA2ouEkrjh674ZuvXboppGRleGYgLeIAadNJ5WQxAFPi+7G6W2368YZAlARAnbCb2FmtZBw7DGOsETl1ZBniN8lBv1y5YauuFNShLX5ZN5E3dOVE0YtZDLf+TFrWxfGbdx9Y7SDXHtgdIEiSdg5ne1V2dcelHvWNRFPZJr3DQRH2ql97oRj9mP7Eh57UZedEgMD-Ggyxz7g7tTFbaZG1GYB8OHaBFl44N0myfdzUkyRZMqYDUsLWpsOPiz60QzznPQ2ZFkdAgoshWQgB8G4AMrtOT8IBCkFQI+dsYJkFCMJwiQQRIsIkVohiWJxQlSUpSS7npZSWXCjlTKKRyXIiCVZUVSKYq1VKsryj1NqnfsUEjpdjwYwh+yM0TOOPeJz1SWueG50npPKWRqm-Qz-109XloK3prMGY3as-tze184jx39sGKMp+do4wRn9MACyJ9uQsvUNJejWXksV1NY+15plMgA3TN5krbOt1D7cq53QkC73ycgKnF3D3Ba93aXk8F-jM-Y-Pe5S5XMuniv78b7pYMt5vxnbTMrvLuR1RKn3PkPDq9NqZi2JmJe0A1p7SUJnPca5dyZVzXjAuW9cVrM30h3Dme8Yb-15kfJGJ9+5n0HunK+WcQAAHYJ643vsLYuT80ELwwe-JhNMAb02-jzX+hC4aAJEcZchPc0IIMLq9UWt8FLoOlvLeatNV5Zx0kI7ef9IYmXVqWTW9xR62X8q8QA5TvGyYp4eCvZvJbFBLsG2gVgrwkduFZ2qJoruxxHiAkRIfZknhP7WkgdGR5VZKHYq5JI5CmjjVCUccGrMJalQiBtDrprxzqglhMiH7SQAByzwehLF+i8Kb0MZjgte49G7CIPkQvR+92Zw0kWA1JNDL4ZPoXNBR+dclsOlIUjhiiuHKOrnNKp9CamkLqc0gBXN6ktIRqA5GEEB5oxHtXXhsC87SIwgMoZOzn5KW4fTbZkyZrTJ-to8RvMxGLIkcs4+ezEFFxksMz6oy34qIuVOTRq0bkPLuQs8yvctbwDwrrfYetAC-u5YsgZFiBGAtvYvy4JbZBXtqFJ2KIopu1ij4xKfjUq+yCZlEJ9Iwkh0KmHHk0SBSxKqjHBJ9UE4fPAm1NOnTM6XOSS82R45eklJOWM6pn96Z3WuQQoFbcSG6NaaszlF8oHVxgUK+B+ykGPHVRNV+S9VXiurpKrR0q5nAv0TK-a-MKH8ryR6UeRTxbEVKac366k1Ey3+fg5utzZUazBfcbITw7L7EADwbgBhffhfsBMOQUW+WtvsDFLiHaIncbi12MUxSe2JQEv25LspUvypE8O9LyqMuqs4WOrLGpHPGu0jZdDeXso1a8t02rsmfJdaKqZhqsF4K3qa4B9yzWCSeTaltAqRaOrgbqspmCNF8LrpTL1A6fWWsabxXuU83ldBsrWkZXbvlusXeomaMCpVrpHcQ-1dwEAMJMeCV4gBSXajSAHI2ASRxqto4xNzisVuIip4-FWbfHJX8WlMlVIKVB3CaGYtdK+QMsqhW8UdV441p1fWrlKq+3Nu3QTZts7XW4dUfwrZ-bFaDtIX631Vru5tLWdQhtXSZo9I7bagZnpCNKKPWvCZHqzkUabsrK9G6gHUboysyhjG0ncvplk4pE67Vem418-VmTe30O2RekTQ6QXAIVdJpVkD0YSr5UpzjqnD3qfoXdX5ZBtMmsvXpi1onDMcaQR6eR7HnUit4wu0jS6As6Z3hJsTBiyyeDlOYe4oBTC4CQPBBF8QLCwHRNELywwx2YF0IQQg9xmJyjDCUIUMxMCKZ5X8koMByvNE9F0E6dFHh-Fq0URrv090tagM0Qo7XKaiy6z1vrWdjG2hq91trJ86J4UG5N1UdEg2zYeMNjM96xuteW2WOIAAvSsoBPAdC5AgKyeFDiHTmPAE7NRrtAA">Rock paper scissors FFA (2023)</a>
+                            </div>
+                        </div>
+                        <div class="project-box">
+                            <img src="x.png" alt="">
+                            <div class="heading">
+                                <a href="https://ncase.me/sim/?lz=N4IgtgpgLghiBcoAmEDOBjATgSwA5WwHsA7BEAIQBkBBAOQGkACAZQEkBZAQgB1jeBRYlAiZGwgB5RG2YoxjEAnmIiSARoXEAaRugAW8gOYRGmAK4AbNIwBkjCGEIArbI1URzhAO7bm1AGr8NiwAEtQASoEKhKaiqNhgnCCaIEiYMJ4IAEwAjMkAZrioWQBsybjmMAoIUGYQAL7JqLDCRfAA2qDYSAgADMnY6CRkSSDEMJBk9vhKqLiEUCMw6AQkrR0gcQak8CAAfAC8I8SmYAi5G80QrAAiZADMi8tExGugTTDCN2QALCNQCrgIGQDIQAPpQMHvYSPFYvBBtAC6dQRyX+gLI2DyoOIEGwBl06kwIAabzx2z2h2Sx1O8HOUKutx22R6MOerxAuEwhFUMFU2HM2H+vQAdD0eplkktYez6V8mX8AUCdiDwZDLqzVvCkSiQGilSBMaC0sQkIRTsjUYqMVicXiCYQiSSNmSyAcjiczo1LnKQNlshq4e1QJzubz+YKqvAeqKxWKAKySp6aoMXD4M+4K9HKsEQ0H0gNrbWWrMGrHG03mnV663Y3H4wnEzSkrauymjD20r1pn3Mgvw4Ncnl8gVCqMx7IJkBStn91OfRm+h7F-Uq3P5xPSrUW3VWnaG8tm4lV3el2t2htOzbkt1Ujt070L3sbmcpkND8Oj6Oxu7ZTKT6fJussqPpkmYrjmappn27RFjuJb7vIFZHsuNa2vWDqNs215ttSnpzumTJxtBQEPhmKHZqqebqs+gGwdWe42nW9qOk2zotjsN7tjS97do+xTEQOobDhGIqlFOSaBiRvFkNk-HkSAq6QdCNGSXRJ4ISah6XqRhFgcCEFUVBKmFtu9GnmhzGYWx2HutxXbzmQoHGbOb5hiOkZfmKP5-s5KbATJACcekUWu1HiZuMGmepZaIVpx7wYx54YZeLocThd72QRICZE54UvusrnCZ+MYAOz-hJMo6SAvzyYphnQlFCVGrF5qsYVH4eeOPl5YBbxVUucHgZR+aNfqGlIaNqFMReOooBgOD4M8ZC6O4HjSHIYCuBUxAANZWV0eEDEMOyALwbgAAe0c4z6oCmCoEMyRzVgeCwmQDgAG5WDAXKmCaciuIKAnWa2tl4f5Ua+QVg5uSJY4Sj1klvLgSxKn0GxzFAzA6ajlgwB9mPSeDg2vYQH2qsRalNQelbyYaFkXqxV7A7edn4T6NXw+y7XuSK5URVJDk7ERtUGeuHNbvFY0xZp1NEwxZ7oSxWFkOlLNg76gNczDX5wwBCNo8jvSNOj+MC9jEC4xAJtZf68nvRAZMQxTkvNdLyGy+Z03JQzqUUiDnas4+LIQ4J77c2O4rBwHhvu3Vou6yZEs1lTbtmbTnuK0DaV+zxAu+uz8cuVDRWdTrFWzrMBuE7M8xWz27M43jVXZOzZl2w7YuRYncvJ5Nct017StZ8zoNN0LHf81lA1mbHYUF53NOJQrVmM0PXEjwTvpyePfUbxOwUKSLs9l-P7tp0lGcr77w-+2r2QABwa0XHU85HYOo9Ph9GePTtJy1KfRfLSyKV2JXzXjfKqQVX5I3QCjI2NcIEjAbpbLGtsSb2whOTXuHtz7Lx9pxXC4Dd6QO3vrGB0dq4YybsQpBtdGTvxPG3DBjsnSa2KmJOeE8fRjw-sNI+fMf7dz-lgs+S9kROgOvAOGR1ySAB4NwATPuXQmDsGoEAgQPTQE9Rax0QDoHkIwAwXJPCMDyA6NAUBUCMDQZgAgExX54JVuvU2kdWGdQjiQiuZCq7GxQSAGhVVcqtzQe3DhAjTw9y7tg0R3sQH4IylHHYA0OE71zi3E8M8v4hOEYvIB0SbLXxzllfOx9IZCWfmOCcr8qqpJLOk5S38skuwmhEkROTB6gIIQUn0uUkkcifmHTy8ZKkbynmkz+dTMnNKlk0hegD6ZtNiarJuNsSEuJFLGQZ7j+r71qWo+pkzGlxRmf3C+9js6ZR9EHFZfStZdV5vlRGldUYUNodHPxu9qn6kYYQTB+zwlHPTrgmJDjCG5z3kM3OIyaljN2RM-5ODgF5LAZ0vigNb7cNGbwjJxTQktLmZndpcTb4P2cdc4q3xwUEXoVCzF4zsUNL+afbJeLL4LMcVlHKj9Sn9JjN1HpasPn6RpUCelQj9nHKPOI7o8A7j9EGOSQAhWSKP1AKfEUBiAyAMCMR6C0Xo7FMKgUwMBzDmBmEjTwLxpCyBMZgMxqBtC6NkG4OQUAahSggEgYxXJNoqt0GqjVJhCBICKBSuUVKhqhSxfwsRrEJHkoNHKsgJ1ACku0qsgeRsA2q1RonVS0dgV3NRYr60Rfo+r9cQAw2hVAxHVeWsQugNWFu+r9AGJKuU3NLnzZJlLhZCp+TM8JkqECTmkWQQAfBuAFRd1NOwbp3VkAAChkI4GI7qACUWb5rPVzSAPIXrLVLptR6wEhBygwuKfM4FyLo49NWeHO5vVSGwLRvAgmZsLYvMJoE0mTC9n9tFXCqJ56znxOqpy0ONyZWbJfT2iNtKo2-L-Yy2ZA9eltuKm4vlTdtnQr7YhnuuSmZIvOY+RJZ6UNgeKh2+5wHlk8Jg6euDv7XYNPFQigjHSiMyTHhhqDMdsPMLFQC1jq92PUa3te0lnUIPcdBVvWjSl6P5RxVMw5iGWP4eE4SpuxKrmoc6mVENdDoPyZw6nZTMtTNIZOUCoDatiF8ugY+55CDkhvKce7L5mC2oSZFOcaT1ssO9v44x6ZqnBPqYJYsohqKHPkO8VFlz5tG48c-eg75zCvO6ZFFJ0jb8jP1QU7REVTGBPwqRDGqVYkR07FHYALV2p0gAgAYTV6iN1aPJI1gwwpUWnPyRxnYRTO3xLDYKujJmAFqZDtDNDPQ716zViVALo2gu4dFYO+AJVZXaJOoAEh36t6AGHtFrmjdX6wLZ6s0dgmvBvcT1wjQ3W3kck1Ax5cDKE8dc929zQTv2wpW8V-9rT8WspBYU0DU3OoBQM9HOT+WxuUwQxZibZHwdrOy4NtW2mYdxzpfB4ra276bfJCdQAKDt7fregHaEBSBHZzdoioCgLEdeu3y27Incs6ceyKDb7iYteOfW5j7obUFfrSz+v7IXEdhcm8XNZvmcu86eXFgXiXkEb1kww77ovfsWbw4B3rwGBtUZvdGdhOXnO8cC2LnXCPxtS6Bxevrecwcy7HLNmUCvXvvqdwlt9PiUvBJx8FlTkv4XheB5epk2nxOZbHMUN35c-cYqW1bgBDKQ+iLK50KVkP43aJkYAdX2ycHap4wOdO7sCrvXcdrdKgpQmsYJ4fQUgoimDrTIHa0gpDYGZ6R43oo5fo8T9S5P2vU+rfK2cVGVWQAyMAAf79XdDRFQLs7Vm7tHGIdIwI9J7uvWf1-y53ZToxxr82zRbxnlvW-+6F0P0uj8xh6N5ePfkm4Lby9jhj4utJh4d9RqPvfvMxxvhn9OFDMLcR9A8v9zNbdSs1s-RCdE1AA5nfq1LRrQMADW6BpzX3JAUCsBcB2mIC8DbwsW7z+iRhunQAFFwE8yzzOCkQTVOkAApd+rKtfkFAIkLAtrMgVg8wINRgRffVT6X6B1HQUwKQU0c1MQG1NAXfRFNnHxaPTnMcAnHnF7J9N7ZXX3ZLDXEXOHZ2NPGAgDe3GzfxQ-blE-eXNQpzDeXKQXMA-3H7SAq-CXQwwHFlX-A-B7FHWGEArtIXcAi-FPeHa-dPNw1nTTHjFnEBAAHj9gg1vkuUUO8K-AHyow8UcyV0+zsJkkuQcK1ycLHxCNcJmgB2ZXCMi1BUN3vT718IfVi352tnrhVy91yJ0NSz0N-iKKaiR3cJMN3kSIAJjxSNqPZyxz4UUyKxcO6Lt16P3yWTMJuR6FSPvVGKT2M0mOD2KOSkzwNClWyAg2nxOkAAsdwAWAJABUskAHg-+rU0ZYDCTgk7FaI1Eg4gfdd1LfCAY9SwWQtjCItzJIl3aMSjFYj3dQ99V9JLNzPIjowRLo52Ho8otlM-LwgE4UZYubIfcNQI0fYIqYuEmYhEkHOuBYijZ7TxRXBookn3CExo-eDzS-Qo3EqaW-YwuY-o4k1xNEyqbQ4fLEgonEzY6Y2AifWkONafGRQAbn36s8gPBPARAq9adyQVErAq0pBUAwAjVLAOCbs987t2d-j790NLCyTPcfFsimQBUdg6Sgj9CbdBSjDZjdSql2SfMod+tz9Yd6T+ToC7SwidT5DhlUUnT39xjCsSsM84Dh0GCQATpABinZYLNFUHlOwMmHEHKEDRkNdOGxCl5LgzgMqyjMACIyerY4SnJMrgnYEsgrdE7kzEj0vZOA7nMUwALf36szAZA3iBDl8yyHil8rBTRiAAByKQCoJoDfG1D6TAbQG1SAMANwTAAAfm+I0wqOtm6UGKUOjG51P3sLWLrOxJtNhKZKML7zFE5ITxrJGxzImNxyaTgJULFMACp9+rCETAMYU0bsrdU0dafQD6MQQgOwVMioGQYgyxHERc5E+-FQ+zKwzI-ws0rM8ATXaEsJIRDLDc-vTM4MyNa8oPVqO-blLco0jIikx8RBZojE4mXQ9LB5Y00E0wqk1XSEtogPKNBmEE6w3OMeeC4Xdo6iuovnDQrKLebir7Ki+pNimCkisgN-Xxcii8y0pCvi9I+owSn0bTESqEpS9i2CwOMirQpiksK0zJCS2iji1cvS6k-wzS8Smi4i1S4jCyxiz7ay4y2ylSr3ZuRysEniliiYkyuyjymSjS5ixw1itygSjy6hOSgyz5RSmy-i8k+yxyS5YKwyuK-czoiaNC5I8cUkgK006K62THEK-Iz-ZwuKOAnPQ4wAXB2WDVEPztERCmh-Vt8viILuUzy-JtKpLCZUrYqxKMqYSsq9dHSN4qi9Y+9OrQDoddyP8cKoD-4fSyi-TfjJ5nTykRiKLsy9y+SDzGS+58SVqVyewuN1ycrNqAysLYN5ryrvS8TmSHT-SZNAzd50UeSdqyqtirM5DVrKTVDTKdKZImj9L2VaT0rdqjzfSfrjqFw1z0c8E-Y401Y4ajdADowprwr1YTT3tCqrKSrkLxpv98KbkMaErsbc5bDcady0qBqIahqBT7qM9Sjti1tMgp8oyTpAAqXfqzABiHYLlPuK3UIF0EYEIP4OMBBEYB2n5HMHWs3LyvcoKpBrxppt4utMyqJpZNGpSTluFAupisvI+puoZIZshuWuhsRNIvapuSgqIsVt3i8q2sQtps+q9MWsZqhp+JhrIFOsGz7xz2goBp6pAC4qppmtVt8tDNwvdrNuQ0et+oXBI0HzGvdLmqjpv3tIJIj19F9rSK2SuqrITmZu+q9stpkjEzN1etTpDNUmYztxPI2UDv1GWTMrgrDo-Xxs9L2s1vju9qZBRuqLRuFH03+vyt3kpuVupv6rVsGpQsPIOoeqzsd32N1sIvR26qSqZAGj6sopnrprnv2siSAR2IkRyAQNOkAG-dnm4tWAGQBqxUlaYxDNUc4QTANIYC0wXAJAbClYn2YFJ5fxZZbc8O2skaMMz2nYf+vrVGYBju96sB4uiVYUnKc+mfQAaH36s3pCBzAHVRdV9yy0YIBPALFogpB00bU5BhC9ERBP6FhrbpsZtXSc7q6oINi8KtanrQd6HXElimGwUAjYc2GY6F7M6jqy7dJuG1l9brY3rQH1QhG67F6xHCSUVJHYY+HZHDaEGFrFHRGLaVGyIOccreHINQVNHtrtHbrhGj6ZptxPAHReCEBQBP7v7oQ814gLBYAcQl8jh05F9A1iZTERgQw5hrE86eMkZrFWhmQehtICZzhInzFeg4mBY4ZEnWhYmGYdIIN0nkmsmCY41cmowUmCJJwinMm-DGQxJymSm5Rucan8mBYVCGnKmEAc8Wn4lmQygvokninGmCJ4COQemMnanGRfxumom8nWnaQcnhmpnOnCm5m+npmKkhnJnlnOnqmlmKnOn6ntnRmzhmn9n+m5Rsh2njnpm2aJnemdmwYz61mbmDnJE0n9mdQ4gAAvJUUATwLoKAXQBAb4VGFaO0BYaVO4OoCFoAA">Life Simulator (2023)</a>
+                            </div>
+                        </div> 
+                        <div class="project-box">
+                            <img src="patrick.png" alt="patrick dumb">
+                            <div class="heading">
+                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Extras (2020-2026)</a>
+                            </div> 
+                        </div>
+                    </div>       
+                </div>
+                <div class="rightkey">
+                    <button id="next">➡️</button>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="experience">
+            <div class="exp">
+                <h2 style="margin-right: 50px;">Experiences</h2>
+                <h2>When i made projects</h2>
+            </div>
+            <div class="history">
+                <div class="left">
+                    <div class="section">
+                        <div class="box-section">
+                            <div class="left-box">
+                                <div class="circle">
+                                    <p>2026</p>
+                                </div>
+                            </div>
+                            <div class="right-box">
+                                <h3>Animating</h3>
+                                <p>Currently learning animation, got some good feedback about it.</p>
+                            </div>
+                        </div>
+                        <div class="box-section">
+                            <div class="left-box">
+                                <div class="circle">
+                                    <p>2025</p>
+                                </div>
+                            </div>
+                            <div class="right-box">
+                                <h3>HTML</h3>
+                                <p>Suprisingly, i first started HTML in late July 2025.</p>
+                            </div>
+                        </div>
+                        <div class="box-section">
+                            <div class="left-box">
+                                <div class="circle">
+                                    <p>2023</p>
+                                </div>
+                            </div>
+                            <div class="right-box">
+                                <h3>Godot</h3>
+                                <p>Tried using Godot in late 2023, but my old laptop unfortunely can't run it :/</p>
+                            </div>
+                        </div>
+                        <div class="box-section">
+                            <div class="left-box">
+                                <div class="circle">
+                                    <p>2020</p>
+                                </div>
+                            </div>
+                            <div class="right-box">
+                                <h3>Scratch</h3>
+                                <p>Used Scratch in 2020-Now, basically grew up with it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                <div class="section">
+                        <div class="box-section">
+                            <div class="left-box">
+                                <div class="circle">
+                                    <p>2026</p>
+                                </div>
+                            </div>
+                            <div class="right-box">
+                                <h3>Animation</h3>
+                                <p>You can actually see one of my animations here!</p>
+                            </div>
+                        </div>
+                        <div class="box-section">
+                            <div class="left-box">
+                                <div class="circle">
+                                    <p>2024</p>
+                                </div>
+                            </div>
+                            <div class="right-box">
+                                <h3>Small programs</h3>
+                                <p>I used to make complicated programs in simple websites ^_^ (you can actually play one of them here!)</p>
+                            </div>
+                        </div>
+                        <div class="box-section">
+                            <div class="left-box">
+                                <div class="circle">
+                                    <p>2022</p>
+                                </div>
+                            </div>
+                            <div class="right-box">
+                                <h3>Geometry dash</h3>
+                                <p>Yep i used to make levels there, i still do just rarely now. (spray poop)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <div class="left-last">
+                <div class="contact" id="Contact">
+                    <div class="contact-footer">
+                        <div class="left-contact-footer">
+                            <h3>Hello!</h3>
+                            <p>888 0137 0255</p>
+                            <a href="https://finaledo.github.io/untuk-sir/">https://finaledo.github.io/untuk-sir/</a>
+                        </div>
+                        <div class="right-contact-footer">
+                            <div class="right-contact-footer-line">
+                            <img src="basketball.png" alt="baskemball" draggable="false">                             
+                            </div>
+                            <div class="right-contact-footer-line">
+                                <img src="instagram.png" alt="instagram" draggable="false">
+                            </div>
+                            <div class="right-contact-footer-line">
+                                <img src="youtube.png" alt="youtube" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-last">
+                <div class="right-last-heading">
+                    <h2>Hi! send a message to me if you want :D</h2>
+                </div>
+                <div class="form">
+                    <div class="name-email">
+                        <input type="text" placeholder="Name here" id="nameInp">
+                        <input type="email" placeholder="Email here" id="emailInp">
+                    </div><br>
+                    <textarea placeholder="Message here" id="messageInp" style="resize: none;">Hello!</textarea><br><br>
+                    <div class="name-email">
+                        <button id="sendBtn">Send Button</button>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <footer>
+            <p>Copyright © 2026 Hanif, all rights reserved.</p>
+            <p>Designed using <span style="color: rgb(33, 129, 255);">HTML, CSS, and JavaScript.</span> See you next time! :3</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="confetti.browser.min.js"></script>
+</body>
+</html>

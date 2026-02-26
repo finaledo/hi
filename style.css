@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+/* dark mode (used tutorial for this :3)*/
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --nav-bg: white;
+    --card-bg: white;
+    --secondary-text: gray;
+    --overlay: rgba(255, 255, 255, 0.9);
+    --reverse-text-color: white;
+    --input-border: gray;
+}
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --nav-bg: #1e1e1e;
+    --card-bg: #222222;
+    --secondary-text: #bbbbbb;
+    --overlay: rgba(0, 0, 0, 0.8);
+    --reverse-text-color: black;
+    --input-border: rgba(255, 255, 255, 0.457);
+}
+.icon {
+    transition: 0.3s;
+}
+body.dark-mode .icon {
+    filter: invert(1);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+html{
+    scroll-behavior: smooth;
+}
+.screen{
+    width: 100%;
+    height: fit-content;
+}
+.navbar{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+.navbar img{
+    user-select: none;
+}
+.profile{
+    width: fit-content;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 30px;
+    align-items: center;
+}
+.profile h3{
+    margin-left: 10px;
+}
+.profile h3:hover{
+    cursor: pointer;
+}
+.profile img{
+    width: 50%;
+    height: 50%;
+}
+.nav{
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    color: gray;
+}
+.nav a{
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.nav a:hover{
+    color: var(--text-color);
+    transform: scale(1.05) rotate(5deg);
+    cursor: pointer;
+}
+.theme{
+    width: 15%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 4%;
+    padding-right: 30px;
+}
+.theme button{
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+.theme button:hover{
+    transform: scale(1.05) rotate(5deg);
+    cursor: pointer;
+}
+.theme img{
+    width: 17.5%;
+    height: 45%;
+}
+.intro{
+    margin-bottom: 100px;
+    width: 100%;
+    height: 50vh;
+    margin-top: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    background: linear-gradient(var(--overlay), var(--overlay)), url(boowomp.png);
+}
+.line{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+.line img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    user-select: none;
+}
+.buttons{
+    width: 100%;
+    height: fit-content;
+}
+.buttons button{
+    height: 40px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+    background-color: rgb(176, 176, 176);
+    transition: 0.3s ease;
+}
+.buttons button:hover{
+    cursor: pointer;
+    transform: scale(1.05) rotate(5deg);
+}
+.info{
+    width: 100%;
+    height: fit-content;
+}
+.info *{
+    font-family: monospace;
+}
+.bar{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.bar h2{
+    font-family: monospace;
+}
+.projects{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+.leftkey,.rightkey{
+    width: 15%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftkey button,.rightkey button{
+    font-size: 30px;
+    padding: 20px;
+    border: none;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    transition: 0.1s ease;
+}
+.leftkey button:hover,.rightkey button:hover{
+    transform: scale(1.05) rotate(5deg);
+    cursor: pointer;
+}
+.content{
+    width: 70%;
+    height: 60vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll{
+    width: 100%;
+    max-width: 100%;
+    height: 50vh;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.project-box{
+    width: 100%;
+    height: 46vh;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border-radius: 20px;
+    background: linear-gradient(var(--overlay), var(--overlay)), url(guy.jpg);
+}
+.project-box img{
+    width: 30%;
+    height: 85%;
+    margin-left: 33%;
+    border-radius: 20px;
+}
+.heading{
+    width: 100%;
+    height: 15vh;
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    background-color: var(--card-bg);
+}
+.heading a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.3s ease;
+    text-align: center;
+}
+.heading a:hover{
+    transform: scale(1.05);
+    color: rgb(133, 178, 255);
+}
+.pagenum{
+    width: 100%;
+    height: fit-content;
+}
+.experience{
+    width: 100%;
+    height: 80vh;
+}
+.exp{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 35%;
+}
+.circle{
+    width: 100%;
+    height: 95%;
+    border-radius: 50%;
+    background-color: rgb(69, 69, 69);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+.history{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+.left,.right{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    padding-right: 70px;
+}
+.section{
+    width: fit-content;
+    height: 100%;
+    padding-top: 10px;
+}
+.box-section{
+    width:20vw;
+    height: 20%;
+    display: flex;
+    margin-bottom: 5px;
+}
+.left-box{
+    width: 30%;
+    height: 100%;
+}
+.right-box{
+    width: 70%;
+    height: 100%;
+    padding-left: 10px;
+}
+.right-box *{
+    font-weight: 500;
+}
+.right-box p{
+    font-size: 9px;
+    color: gray;
+}
+.last{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+.left-last{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.right-last{
+    width: 50%;
+    height: 80vh;
+    padding: 25px;
+}
+.contact{
+    width: 70%;
+    height: 90%;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(var(--overlay), var(--overlay)), url(guy.jpg);
+    border-radius: 20px;
+}
+.contact-footer{
+    width: 100%;
+    height: 30%;
+    background-color: rgb(76, 76, 76);
+    padding: 10px;
+    display: flex;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.left-contact-footer,.right-contact-footer{
+    width: 50%;
+    height: 100%;
+}
+.left-contact-footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.right-contact-footer-line{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.right-contact-footer-line img{
+    width: 10%;
+    filter: brightness(0) invert(1);
+    user-select: none;
+}
+.right-last-heading{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+}
+.form{
+    width: 100%;
+    height: 60vh;
+    padding: 10px;
+}
+.name-email{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: end;
+}
+.name-email input, .name-email button{
+    width: 45%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+    margin-right: 50px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+}
+.form textarea{
+    width: 91%;
+    height: 30vh;
+    padding: 10px;
+    font-size: 14px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+}
+.name-email button{
+    border-radius: 20px;
+    background-color: rgb(250, 203, 48);
+    color: var(--reverse-text-color);
+    font-weight: bold;
+    border: none;
+    width: 30%;
+    padding-right: 5px;
+    transition: 0.3s ease;
+}
+.name-email button:hover{
+    transform: scale(1.05) rotate(5deg);
+    background-color: rgb(255, 221, 4);
+    cursor: pointer;
+}
+footer{
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    padding-top: 10px;
+    box-shadow: 0 -4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+@media(max-width: 600px){
+    .navbar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav a{
+        font-size: 10px;
+    }
+    .nav{
+        gap: 2%;
+    }
+    .profile{
+        padding: 0px;
+        margin-left: 20px;
+    }
+    .navbar img{
+        width: 30px;
+        height: 30px;   
+    }
+    .navbar h3{
+        font-size: 12px;
+    }
+    .theme h4{
+        font-size: 12px;
+    }
+    .theme{
+        margin-left: 35px;
+    }
+    .intro{
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    .intro img{
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+    .line{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .resp{
+        margin-right: 30px;
+    }
+    .project-box img{
+        width: 100%;
+        margin: 0;
+    }
+    .left{
+        margin-left: 60px;
+    }
+    .projects{
+        margin-left: 20px;
+    }
+    .right{
+        margin-right: 20px;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    .theme img{
+        margin-left: 10px;
+    }
+    .leftkey,.rightkey{
+        display: none;
+    }
+    .content{
+        width: 90%;
+        margin-right: auto;
+    }
+    .exp{
+        gap: 0;
+    }
+    .exp h2{
+        font-size: 12px;
+    }
+    .box-section{
+        flex-wrap: wrap;
+        margin-bottom: 125px;
+    }
+    .left-box,.right-box{
+        width: 100%;
+        padding: 0;
+    }
+    .right-box p{
+        font-size: 7px;
+    }
+    .circle{
+        width: 100%;
+        height: 85%;
+    }
+    .last{
+        margin-top: 350px;
+        flex-direction: column;
+    }
+    .left-last,.right-last{
+        width: 100%;
+        flex-shrink: 0;
+        height: 65vh;
+    }
+    footer{
+        margin-top: 150px;
+        padding-left: 10px;
+    }
+    .name-email input, .name-email button{
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+        margin-right: 30px;
+    }
+    .name-email input{
+        width: 40%;
+    }
+    footer{
+        font-size: 10px;
+    }
+    .intro{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    footer{
+        margin-top: 50px;
+    }
+    .nav{
+        gap: 12px;
+    }
+}
