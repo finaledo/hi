@@ -90,3 +90,4 @@ function celebrate() {
         });
     });
 }
+console.log("if your reading this, why are you in the console?")
