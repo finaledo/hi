@@ -579,4 +579,7 @@ footer{
     .nav{
         gap: 12px;
     }
+    .heading a{
+        font-size: 20px;
+    }
 }
